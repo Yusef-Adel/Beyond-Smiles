@@ -6,12 +6,15 @@ import Link from "next/link"
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Navigation />
+
       {/* Hero Section */}
       <section className="relative px-6 py-24 md:py-32 bg-gradient-to-br from-light-grey via-white to-mint-green/20">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
             Meet Our <span className="italic text-sage-green/80">Expert Team</span>
           </h1>
+          <div className="w-24 h-12 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
             Our team is made up of experienced specialists in every field of dentistry. From general dentists to oral
             surgeons, orthodontists, and periodontists, Beyond Smiles ensures that every patient receives top-tier care.
@@ -82,7 +85,29 @@ export default function TeamPage() {
         </div>
       </section>
 
-      
+      {/* CTA Section */}
+      <section className="px-6 py-20 bg-sage-green text-white">
+        <div className="max-w-7xl mx-auto text-center space-y-8">
+          <h2 className="font-serif text-4xl font-bold">Ready to Meet Our Team?</h2>
+          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+            Schedule your consultation and experience expert care from our specialists
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" className="bg-white text-sage-green hover:bg-gray-100">
+              Book Appointment
+            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-sage-green bg-transparent"
+              >
+                Contact Us
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

@@ -1,48 +1,33 @@
-import Image from "next/image"
-
 interface LogoProps {
   className?: string
-  size?: "sm" | "md" | "lg" | "xl"
-  variant?: "full" | "icon-only"
+  showIcon?: boolean
 }
 
-export function Logo({ 
-  className = "", 
-  size = "md",
-  variant = "full" 
-}: LogoProps) {
-  const sizeClasses = {
-    sm: { width: 120, height: 120 },
-    md: { width: 160, height: 160 }, 
-    lg: { width: 200, height: 200 },
-    xl: { width: 240, height: 240 }
-  }
-
-  const iconSizeClasses = {
-    sm: { width: 40, height: 40 },
-    md: { width: 60, height: 60 }, 
-    lg: { width: 80, height: 80 },
-    xl: { width: 100, height: 100 }
-  }
-
-  const dimensions = variant === "icon-only" ? iconSizeClasses[size] : sizeClasses[size]
-
+export function Logo({ className = "", showIcon = true }: LogoProps) {
   return (
-    <div className={`${className}`}>
-      <Image
-        src="/Beyond Smiles - Icon-02.svg"
-        alt="Beyond Smiles - Icon"
-        width={dimensions.width}
-        height={dimensions.height}
-      />
-      <Image
-        src="/Beyond Smiles - Wordmark-02.svg"
-        alt="Beyond Smiles - Premium Dental Care"
-        width={dimensions.width}
-        height={dimensions.height}
-        className="object-contain"
-        priority
-      />
+    <div className={`flex flex-col items-center gap-1 ${className}`}>
+      {showIcon && (
+        <div className="w-12 h-6 sm:w-16 sm:h-8">
+          <svg viewBox="0 0 100 50" className="w-full h-full">
+            <defs>
+              <linearGradient id="smileGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#D6FFD7" />
+                <stop offset="100%" stopColor="#72846F" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M10 35 Q50 10 90 35"
+              stroke="url(#smileGradient)"
+              strokeWidth="8"
+              fill="none"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
+      )}
+      <div className="text-sage-green font-serif text-lg sm:text-xl font-medium tracking-wide">
+        beyond<span className="italic">smiles</span>
+      </div>
     </div>
   )
 }

@@ -86,7 +86,6 @@
   /* Added brand font variables */
   --font-serif: var(--font-garamond);
   --font-sans: var(--font-inter);
-  --font-neutral-sans: var(--font-neutral-sans);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -166,45 +165,5 @@
   }
   .bg-light-grey {
     background-color: var(--light-grey);
-  }
-  
-  /* Neutral Sans font utilities */
-  .font-neutral {
-    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
-  }
-  .font-secondary {
-    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
-  }
-  
-  /* Loader animations */
-  @keyframes continuousJump {
-    0%, 100% {
-      transform: translateY(0) scale(1);
-    }
-    50% {
-      transform: translateY(-20px) scale(1.02);
-    }
-  }
-
-  .logo-bounce-container {
-    animation: continuousJump 1.5s ease-in-out infinite;
-    filter: drop-shadow(0 4px 8px rgba(114, 132, 111, 0.1));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .smile-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .wordmark-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .wordmark-image {
-    filter: drop-shadow(0 2px 4px rgba(114, 132, 111, 0.1));
   }
 }

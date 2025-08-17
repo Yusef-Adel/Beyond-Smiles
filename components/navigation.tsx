@@ -23,9 +23,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <Link href="/" className="flex-shrink-0">
-            <Logo size="md" variant="icon-only" className="flex flex-col gap-2 md:hidden" />
-            <Logo size="md" variant="icon-only" className="hidden md:flex lg:hidden flex-col gap-2" />
-            <Logo size="lg" variant="icon-only" className="hidden lg:flex flex-col gap-2" />
+            <Logo className="scale-50 sm:scale-75" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -34,12 +32,12 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-sage-green transition-colors duration-200 font-medium text-sm xl:text-base font-secondary"
+                className="text-gray-700 hover:text-sage-green transition-colors duration-200 font-medium text-sm xl:text-base font-sans"
               >
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-sage-green hover:bg-sage-green/90 text-white text-sm xl:text-base px-4 xl:px-6 font-secondary">
+            <Button className="bg-sage-green hover:bg-sage-green/90 text-white text-sm xl:text-base px-4 xl:px-6 font-sans">
               Book Appointment
             </Button>
           </div>
@@ -64,14 +62,14 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 hover:text-sage-green hover:bg-gray-50 transition-colors duration-200 font-medium px-4 py-3 rounded-md font-secondary"
+                  className="text-gray-700 hover:text-sage-green hover:bg-gray-50 transition-colors duration-200 font-medium px-4 py-3 rounded-md font-sans"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
               <div className="px-4 pt-2">
-                <Button className="w-full bg-sage-green hover:bg-sage-green/90 text-white font-secondary">
+                <Button className="w-full bg-sage-green hover:bg-sage-green/90 text-white font-sans">
                   Book Appointment
                 </Button>
               </div>
