@@ -1,16 +1,16 @@
 import Image from "next/image"
 
-interface LogoProps {
+interface FooterLogoProps {
   className?: string
   size?: "sm" | "md" | "lg" | "xl"
   variant?: "full" | "icon-only"
 }
 
-export function Logo({ 
+export function FooterLogo({ 
   className = "", 
   size = "md",
   variant = "full" 
-}: LogoProps) {
+}: FooterLogoProps) {
   const sizeClasses = {
     sm: { width: 120, height: 120 },
     md: { width: 160, height: 160 }, 
@@ -30,13 +30,13 @@ export function Logo({
   return (
     <div className={`${className}`}>
       <Image
-        src="/Beyond Smiles - Icon-02.svg"
+        src="/Beyond Smiles - Icon-03.svg"
         alt="Beyond Smiles - Icon"
         width={dimensions.width}
         height={dimensions.height}
       />
       <Image
-        src="/Beyond Smiles - Wordmark-02.svg"
+        src="/Beyond Smiles - Wordmark-03.svg"
         alt="Beyond Smiles - Premium Dental Care"
         width={dimensions.width}
         height={dimensions.height}
