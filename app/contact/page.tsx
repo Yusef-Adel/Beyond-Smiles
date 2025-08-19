@@ -5,13 +5,15 @@ import { Card } from "@/components/ui/card"
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Navigation />
+
       {/* Hero Section */}
       <section className="relative px-6 py-24 md:py-32 bg-gradient-to-br from-light-grey via-white to-mint-green/20">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
             Contact <span className="italic text-sage-green/80">Us</span>
           </h1>
-          
+          <div className="w-24 h-12 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
             Have a question or want to book an appointment? Reach out to us! We're here to help you achieve your perfect
             smile.
@@ -159,6 +161,7 @@ export default function ContactPage() {
           <h2 className="font-serif text-4xl text-sage-green mb-6">
             Find <span className="italic text-sage-green/80">Us</span>
           </h2>
+          <div className="w-16 h-8 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
           <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
             <p className="text-gray-500">Interactive Map Coming Soon</p>
           </div>

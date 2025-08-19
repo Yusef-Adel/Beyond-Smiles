@@ -15,8 +15,8 @@ export default function AboutPage() {
           <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
             About <span className="italic text-sage-green/80">Beyond Smiles</span>
           </h1>
-          
-          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-secondary">
+          <div className="w-24 h-12 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
             More than just a dental clinic - we are a full-service dental center dedicated to providing advanced oral
             care with specialists across all fields of dentistry.
           </p>
@@ -38,7 +38,7 @@ export default function AboutPage() {
               <h2 className="font-serif text-4xl text-sage-green mb-6">
                 Our <span className="italic text-sage-green/80">Mission</span>
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8 font-secondary">
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 To provide high-quality, patient-centered dental care with a focus on understanding, innovation,
                 technology, and comprehensive treatment planning. Every patient receives the best care possible under
                 one roof.
@@ -47,22 +47,22 @@ export default function AboutPage() {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-sage-green mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 font-secondary">Expert Specialists</h3>
-                    <p className="text-gray-600 font-secondary">Across all fields of dentistry</p>
+                    <h3 className="font-semibold text-gray-900">Expert Specialists</h3>
+                    <p className="text-gray-600">Across all fields of dentistry</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-sage-green mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 font-secondary">Advanced Technology</h3>
-                    <p className="text-gray-600 font-secondary">For precise and comfortable care</p>
+                    <h3 className="font-semibold text-gray-900">Advanced Technology</h3>
+                    <p className="text-gray-600">For precise and comfortable care</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-sage-green mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 font-secondary">Personalized Treatment</h3>
-                    <p className="text-gray-600 font-secondary">Tailored to your unique needs</p>
+                    <h3 className="font-semibold text-gray-900">Personalized Treatment</h3>
+                    <p className="text-gray-600">Tailored to your unique needs</p>
                   </div>
                 </div>
               </div>
@@ -77,7 +77,8 @@ export default function AboutPage() {
             <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
               Our <span className="italic text-sage-green/80">Values</span>
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-secondary">
+            <div className="w-16 h-8 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -114,7 +115,7 @@ export default function AboutPage() {
                     {value.icon}
                   </div>
                   <h3 className="font-serif text-xl text-sage-green mb-3">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed font-secondary">{value.description}</p>
+                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -122,7 +123,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      
+      {/* CTA Section */}
+      <section className="px-6 py-20 bg-sage-green text-white">
+        <div className="max-w-7xl mx-auto text-center space-y-8">
+          <h2 className="font-serif text-4xl font-bold">Meet Our Expert Team</h2>
+          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+            Get to know the specialists who make Beyond Smiles exceptional
+          </p>
+          <Link href="/team">
+            <Button size="lg" variant="secondary" className="bg-white text-sage-green hover:bg-gray-100">
+              Meet Our Team
+            </Button>
+          </Link>
+        </div>
+      </section>
     </div>
   )
 }
