@@ -22,7 +22,6 @@ export default function HomePage() {
                 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-sage-green mb-6 leading-tight">
                   Beyond Dentistry. <span className="italic text-sage-green/90">Beyond Expectations.</span>
                 </h1>
-                <div className="w-24 h-12 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto lg:mx-0 mb-6 opacity-80"></div>
               </div>
 
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
@@ -81,7 +80,6 @@ export default function HomePage() {
             <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
               Comprehensive Dental Care <span className="italic text-sage-green/80">Under One Roof</span>
             </h2>
-            <div className="w-16 h-8 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
               We offer a full range of dental specialties, ensuring that every patient receives the best care possible
               with our team of expert specialists.
@@ -324,7 +322,6 @@ export default function HomePage() {
           <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
             Meet Our <span className="italic text-sage-green/80">Expert Team</span>
           </h2>
-          <div className="w-16 h-8 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
             Our team is made up of experienced specialists in every field of dentistry, ensuring that every patient
             receives top-tier care.

@@ -135,7 +135,6 @@ export default function ServicesPage() {
           <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
             Our <span className="italic text-sage-green/80">Services</span>
           </h1>
-          <div className="w-24 h-12 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
             Comprehensive dental care under one roof. Our expert specialists provide everything from routine checkups to
             advanced treatments, ensuring the best possible care for every patient.

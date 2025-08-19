@@ -6,15 +6,13 @@ import Link from "next/link"
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="relative px-6 py-24 md:py-32 bg-gradient-to-br from-light-grey via-white to-mint-green/20">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
             Meet Our <span className="italic text-sage-green/80">Expert Team</span>
           </h1>
-          <div className="w-24 h-12 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
+          
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
             Our team is made up of experienced specialists in every field of dentistry. From general dentists to oral
             surgeons, orthodontists, and periodontists, Beyond Smiles ensures that every patient receives top-tier care.

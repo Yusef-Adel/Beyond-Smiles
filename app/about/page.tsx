@@ -15,7 +15,7 @@ export default function AboutPage() {
           <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
             About <span className="italic text-sage-green/80">Beyond Smiles</span>
           </h1>
-          <div className="w-24 h-12 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
+        
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
             More than just a dental clinic - we are a full-service dental center dedicated to providing advanced oral
             care with specialists across all fields of dentistry.
@@ -77,7 +77,6 @@ export default function AboutPage() {
             <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
               Our <span className="italic text-sage-green/80">Values</span>
             </h2>
-            <div className="w-16 h-8 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
               The principles that guide everything we do
             </p>
