@@ -30,12 +30,6 @@ export function Logo({
   return (
     <div className={`${className}`}>
       <Image
-        src="/Beyond Smiles - Icon-02.svg"
-        alt="Beyond Smiles - Icon"
-        width={dimensions.width}
-        height={dimensions.height}
-      />
-      <Image
         src="/Beyond Smiles - Wordmark-02.svg"
         alt="Beyond Smiles - Premium Dental Care"
         width={dimensions.width}

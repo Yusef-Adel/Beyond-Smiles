@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { BeforeAfterSlider } from "@/components/before-after-slider"
 import Link from "next/link"
-import { Shield, Smile, Sparkles, Wrench, Heart, Users } from "lucide-react"
+import { Shield, Smile, Sparkles, Wrench, Heart, Users, Star, Quote } from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -150,6 +151,141 @@ export default function HomePage() {
                 View All Services
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Before & After Section */}
+      <section className="px-6 py-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+              See The <span className="italic text-sage-green/80">Transformation</span>
+            </h2>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-secondary">
+              Witness the remarkable results of our professional teeth whitening treatments. 
+              Drag the slider to reveal the incredible transformation.
+            </p>
+          </div>
+
+          {/* Interactive Before/After Slider - Centered */}
+          <div className="flex justify-center">
+            <BeforeAfterSlider
+              beforeImage="/image.png"
+              afterImage="/Screenshot_1.jpg"
+              beforeAlt="Teeth before whitening treatment"
+              afterAlt="Teeth after professional whitening"
+              className="shadow-2xl max-w-4xl"
+            />
+          </div>
+          
+          <p className="text-center text-sm text-gray-500 mt-6 font-secondary">
+            Drag the slider to see the transformation
+          </p>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="px-6 py-20 bg-gradient-to-br from-mint-green/10 to-sage-green/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+              What Our Patients <span className="italic text-sage-green/80">Say</span>
+            </h2>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-secondary">
+              Real stories from real patients who have experienced the Beyond Smiles difference.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Sarah Johnson",
+                location: "Downtown",
+                rating: 5,
+                text: "The teeth whitening results exceeded my expectations! The staff was incredibly professional and made me feel comfortable throughout the entire process. I can't stop smiling!",
+                treatment: "Teeth Whitening"
+              },
+              {
+                name: "Michael Chen",
+                location: "Westside",
+                rating: 5,
+                text: "After years of avoiding smiles, Beyond Smiles transformed my confidence with their cosmetic dentistry. The attention to detail and care was exceptional.",
+                treatment: "Cosmetic Dentistry"
+              },
+              {
+                name: "Emily Rodriguez",
+                location: "East End",
+                rating: 5,
+                text: "The orthodontic treatment here was seamless. Dr. Smith and the team made sure I was informed every step of the way. My smile has never looked better!",
+                treatment: "Orthodontics"
+              },
+              {
+                name: "David Thompson",
+                location: "Uptown",
+                rating: 5,
+                text: "I was nervous about getting dental implants, but the team at Beyond Smiles made the process smooth and comfortable. The results are incredible!",
+                treatment: "Dental Implants"
+              },
+              {
+                name: "Lisa Park",
+                location: "Southside",
+                rating: 5,
+                text: "The preventive care program here is outstanding. They caught issues early and prevented major problems. Truly beyond expectations!",
+                treatment: "Preventive Care"
+              },
+              {
+                name: "James Wilson",
+                location: "North Hills",
+                rating: 5,
+                text: "The root canal treatment was painless and efficient. The technology and expertise at Beyond Smiles is truly world-class.",
+                treatment: "Endodontics"
+              }
+            ].map((testimonial, index) => (
+              <Card key={index} className="p-6 border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group relative overflow-hidden">
+                {/* Quote icon */}
+                <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Quote className="w-8 h-8 text-sage-green" />
+                </div>
+
+                {/* Rating */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+
+                {/* Testimonial text */}
+                <p className="text-gray-600 mb-6 leading-relaxed font-secondary italic">
+                  "{testimonial.text}"
+                </p>
+
+                {/* Patient info */}
+                <div className="border-t border-gray-100 pt-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="font-medium text-sage-green">{testimonial.name}</h4>
+                      <p className="text-sm text-gray-500 font-secondary">{testimonial.location}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xs text-sage-green font-medium bg-sage-green/10 px-2 py-1 rounded">
+                        {testimonial.treatment}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-600 mb-6 font-secondary">
+              Ready to start your own transformation story?
+            </p>
+            <Button size="lg" className="bg-sage-green hover:bg-sage-green/90 text-white px-8 font-secondary">
+              Book Your Consultation
+            </Button>
           </div>
         </div>
       </section>
