@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Shield, Smile, Scissors, Wrench, Sparkles, Heart, Users, Baby, Zap } from "lucide-react"
+import Link from "next/link"
 
 export default function ServicesPage() {
   const services = [
@@ -179,9 +180,11 @@ export default function ServicesPage() {
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
             Schedule your consultation today and let us create a personalized treatment plan for you
           </p>
-          <Button size="lg" variant="secondary" className="bg-white text-sage-green hover:bg-gray-100">
-            Book an Appointment
-          </Button>
+          <Link href="/contact">
+            <Button size="lg" variant="secondary" className="bg-white cursor-pointer  text-sage-green hover:bg-gray-100">
+              Book Appointment
+            </Button>
+            </Link>
         </div>
       </section>
     </div>

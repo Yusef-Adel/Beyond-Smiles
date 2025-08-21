@@ -14,7 +14,6 @@ export function Navigation() {
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
     { href: "/team", label: "Our Team" },
-    { href: "/testimonials", label: "Testimonials" },
     { href: "/contact", label: "Contact" },
   ]
 
@@ -39,7 +38,7 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-sage-green hover:bg-sage-green/90 text-white text-sm xl:text-base px-4 xl:px-6 font-sans">
+            <Button className="bg-sage-green cursor-pointer  hover:bg-sage-green/90 text-white text-sm xl:text-base px-4 xl:px-6 font-sans">
               Book Appointment
             </Button>
           </div>

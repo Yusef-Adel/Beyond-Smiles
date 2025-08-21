@@ -91,14 +91,16 @@ export default function TeamPage() {
             Schedule your consultation and experience expert care from our specialists
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-sage-green hover:bg-gray-100">
+            <Link href="/contact">
+            <Button size="lg" variant="secondary" className="bg-white cursor-pointer text-sage-green hover:bg-gray-100">
               Book Appointment
             </Button>
+            </Link>
             <Link href="/contact">
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-sage-green bg-transparent"
+                className="border-white text-white cursor-pointer  hover:bg-white hover:text-sage-green bg-transparent"
               >
                 Contact Us
               </Button>

@@ -130,7 +130,7 @@ export default function AboutPage() {
             Get to know the specialists who make Beyond Smiles exceptional
           </p>
           <Link href="/team">
-            <Button size="lg" variant="secondary" className="bg-white text-sage-green hover:bg-gray-100">
+            <Button size="lg" variant="secondary" className="bg-white cursor-pointer text-sage-green hover:bg-gray-100">
               Meet Our Team
             </Button>
           </Link>

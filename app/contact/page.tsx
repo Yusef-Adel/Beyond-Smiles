@@ -12,7 +12,6 @@ export default function ContactPage() {
           <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
             Contact <span className="italic text-sage-green/80">Us</span>
           </h1>
-          <div className="w-24 h-12 bg-gradient-to-r from-mint-green to-sage-green rounded-full mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
             Have a question or want to book an appointment? Reach out to us! We're here to help you achieve your perfect
             smile.

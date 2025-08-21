@@ -30,14 +30,14 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <Button size="lg" className="bg-sage-green hover:bg-sage-green/90 text-white px-8 py-4 text-lg">
+                <Button size="lg" className="bg-sage-green cursor-pointer  hover:bg-sage-green/90 text-white px-8 py-4 text-lg">
                   Book an Appointment
                 </Button>
                 <Link href="/services">
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-sage-green text-sage-green hover:bg-sage-green hover:text-white px-8 py-4 text-lg bg-transparent"
+                    className="border-sage-green cursor-pointer  text-sage-green hover:bg-sage-green hover:text-white px-8 py-4 text-lg bg-transparent"
                   >
                     Explore Our Services
                   </Button>
