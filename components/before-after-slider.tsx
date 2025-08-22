@@ -86,7 +86,7 @@ export function BeforeAfterSlider({
         />
         {/* Before Label */}
         <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-md text-sm font-medium">
-          Before Whitening
+          Before
         </div>
       </div>
 
@@ -106,7 +106,7 @@ export function BeforeAfterSlider({
         />
         {/* After Label */}
         <div className="absolute top-4 right-4 bg-sage-green text-white px-3 py-1 rounded-md text-sm font-medium">
-          After Whitening
+          After
         </div>
       </div>
 
