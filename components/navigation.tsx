@@ -28,17 +28,17 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <div className="hidden  lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-sage-green transition-colors duration-200 font-medium text-sm xl:text-base font-sans"
+                className="text-gray-700  hover:text-sage-green transition-colors duration-200 font-medium text-sm xl:text-base font-neutral-regular"
               >
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-sage-green cursor-pointer  hover:bg-sage-green/90 text-white text-sm xl:text-base px-4 xl:px-6 font-sans">
+            <Button className="bg-sage-green cursor-pointer font-neutral-regular  hover:bg-sage-green/90 text-white text-sm xl:text-base px-4 xl:px-6 ">
               Book Appointment
             </Button>
           </div>

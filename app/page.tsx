@@ -38,17 +38,16 @@ export default function HomePage() {
                 </h1>
               </div>
 
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-                From routine checkups to advanced procedures, Beyond Smiles is
-                your trusted destination for complete medical health and
-                well-being. Experience a new era of medical excellence.
+              <p className="text-xl text-dark-grey mb-8 leading-relaxed max-w-2xl font-neutral-medium">
+                More than a clinic, it's a fusion of science and artistry, where
+                every detail builds a smarter, faster and more advanced future.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <Link href="/contact">
                   <Button
                     size="lg"
-                    className="bg-sage-green cursor-pointer  hover:bg-sage-green/90 text-white px-8 py-4 text-lg"
+                    className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8 py-4 text-lg"
                   >
                     Book an Appointment
                   </Button>
@@ -58,7 +57,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-sage-green cursor-pointer  text-sage-green hover:bg-sage-green hover:text-white px-8 py-4 text-lg bg-transparent"
+                    className="border-sage-green cursor-pointer font-neutral-medium  text-sage-green hover:bg-sage-green hover:text-white px-8 py-4 text-lg bg-transparent"
                   >
                     Explore Our Services
                   </Button>
@@ -66,7 +65,7 @@ export default function HomePage() {
               </div>
 
               {/* Trust indicators */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start text-sm text-gray-500">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start text-sm text-dark-grey font-neutral-medium">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-sage-green rounded-full"></div>
                   <span>Expert specialists across all fields</span>
@@ -102,7 +101,7 @@ export default function HomePage() {
               Comprehensive Dental Care{" "}
               <span className="italic text-sage-green/80">Under One Roof</span>
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto font-neutral-medium">
               We offer a full range of dental specialties, ensuring that every
               patient receives the best care possible with our team of expert
               specialists.
@@ -181,10 +180,10 @@ export default function HomePage() {
                 <h3 className="font-serif text-xl text-sage-green mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-dark-grey mb-4 leading-relaxed font-neutral-regular">
                   {service.description}
                 </p>
-                <ul className="text-sm text-gray-500 space-y-1">
+                <ul className="text-sm text-neutral-grey space-y-1 font-neutral-regular">
                   {service.features.map((feature, idx) => (
                     <li key={idx}>• {feature}</li>
                   ))}
@@ -197,7 +196,7 @@ export default function HomePage() {
             <Link href="/services">
               <Button
                 size="lg"
-                className="bg-sage-green hover:bg-sage-green/90 text-white px-8"
+                className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
               >
                 View All Services
               </Button>
@@ -214,7 +213,7 @@ export default function HomePage() {
               See The{" "}
               <span className="italic text-sage-green/80">Transformation</span>
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-secondary">
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto font-neutral-medium">
               Witness the remarkable results of our professional teeth whitening
               treatments. Drag the slider to reveal the incredible
               transformation.
@@ -232,7 +231,7 @@ export default function HomePage() {
             />
           </div>
 
-          <p className="text-center text-sm text-gray-500 mt-6 font-secondary">
+          <p className="text-center text-sm text-neutral-grey mt-6 font-neutral-regular">
             Drag the slider to see the transformation
           </p>
         </div>
@@ -246,7 +245,7 @@ export default function HomePage() {
               What Our Patients{" "}
               <span className="italic text-sage-green/80">Say</span>
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-secondary">
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto font-neutral-medium">
               Real stories from real patients who have experienced the Beyond
               Smiles difference.
             </p>
@@ -317,7 +316,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Testimonial text */}
-                <p className="text-gray-600 mb-6 leading-relaxed font-secondary italic">
+                <p className="text-dark-grey mb-6 leading-relaxed font-neutral-regular italic">
                   "{testimonial.text}"
                 </p>
 
@@ -325,10 +324,10 @@ export default function HomePage() {
                 <div className="border-t border-gray-100 pt-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="font-medium text-sage-green">
+                      <h4 className="font-medium text-sage-green font-neutral-medium">
                         {testimonial.name}
                       </h4>
-                      <p className="text-sm text-gray-500 font-secondary">
+                      <p className="text-sm text-neutral-grey font-neutral-regular">
                         {testimonial.location}
                       </p>
                     </div>
@@ -345,15 +344,17 @@ export default function HomePage() {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-lg text-gray-600 mb-6 font-secondary">
+            <p className="text-lg text-dark-grey mb-6 font-neutral-medium">
               Ready to start your own transformation story?
             </p>
-            <Button
-              size="lg"
-              className="bg-sage-green hover:bg-sage-green/90 text-white px-8 font-secondary"
-            >
-              Book Your Consultation
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-sage-green cursor-pointer hover:bg-sage-green/90 text-white px-8 font-neutral-medium"
+              >
+                Book Your Consultation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -366,14 +367,14 @@ export default function HomePage() {
               <h2 className="font-serif text-4xl text-sage-green mb-6">
                 Who We <span className="italic text-sage-green/80">Are</span>
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-lg text-dark-grey leading-relaxed mb-8 font-neutral-regular">
                 Beyond Smiles is more than just a dental clinic; we are a
                 full-service dental center dedicated to providing advanced oral
                 care. Our team consists of specialists across all fields of
                 dentistry.
               </p>
               <Link href="/about">
-                <Button className="bg-sage-green hover:bg-sage-green/90 text-white">
+                <Button className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white">
                   Learn More About Us
                 </Button>
               </Link>
@@ -396,14 +397,14 @@ export default function HomePage() {
             Meet Our{" "}
             <span className="italic text-sage-green/80">Expert Team</span>
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
+          <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
             Our team is made up of experienced specialists in every field of
             dentistry, ensuring that every patient receives top-tier care.
           </p>
           <Link href="/team">
             <Button
               size="lg"
-              className="bg-sage-green hover:bg-sage-green/90 text-white px-8"
+              className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
             >
               Meet Our Team
             </Button>
@@ -425,7 +426,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="secondary"
-              className="bg-white text-sage-green hover:bg-gray-100"
+              className="bg-white font-neutral-medium cursor-pointer text-sage-green hover:bg-gray-100"
             >
               Book Appointment
             </Button>
@@ -433,7 +434,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-sage-green bg-transparent"
+                className="border-white font-neutral-medium cursor-pointer text-white hover:bg-white hover:text-sage-green bg-transparent"
               >
                 Contact Us
               </Button>

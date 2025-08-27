@@ -145,7 +145,7 @@ export default function ContactPage() {
                     ></textarea>
                   </div>
 
-                  <Button className="w-full bg-sage-green hover:bg-sage-green/90 text-white py-3">Send Message</Button>
+                  <Button className="w-full font-neutral-medium cursor-pointer bg-sage-green hover:bg-sage-green/90 text-white py-3">Send Message</Button>
                 </form>
               </Card>
             </div>

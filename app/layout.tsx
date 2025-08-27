@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { EB_Garamond } from "next/font/google"
 import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -18,6 +19,15 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
+// Neutral Sans font
+const neutralSans = localFont({
+  src: "../public/fonts/NeutralSans-Regular.otf",
+  variable: "--font-neutral-sans",
+  weight: "400",
+  display: "swap",
+  fallback: ["Inter", "system-ui", "sans-serif"],
+})
+
 export const metadata: Metadata = {
   title: "Beyond Smiles - Beyond Dentistry. Beyond Expectations.",
   description:
@@ -31,7 +41,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${garamond.variable} ${inter.variable} antialiased`}>
+    <html 
+      lang="en" 
+      className={`${garamond.variable} ${inter.variable} ${neutralSans.variable} antialiased`}
+    >
       <body className="font-sans">
         <Navigation />
         {children}

@@ -6,18 +6,30 @@ import Link from "next/link"
 export default function ServicesPage() {
   const services = [
     {
-      title: "General & Preventive Dentistry",
-      description:
-        "Regular checkups, cleanings, and fillings to maintain optimal oral health and prevent future issues.",
+      title: "Cosmetic Dentistry",
+      description: "Teeth whitening, veneers, and complete smile makeovers to enhance your natural beauty.",
       features: [
-        "Comprehensive oral examinations",
-        "Professional dental cleanings",
-        "Cavity prevention and treatment",
-        "Fluoride treatments",
-        "Dental sealants",
-        "Oral cancer screenings",
+        "Professional teeth whitening",
+        "Porcelain veneers",
+        "Complete smile design",
+        "Dental bonding",
+        "Gum contouring",
+        "Smile makeover consultations",
       ],
-      icon: Shield,
+      icon: Sparkles,
+    },
+    {
+      title: "Implants & Oral Surgery",
+      description: "Dental implants, extractions, and bone grafting for comprehensive tooth replacement solutions.",
+      features: [
+        "Single and multiple implants",
+        "All-on-4 implant solutions",
+        "Wisdom tooth extraction",
+        "Bone grafting procedures",
+        "Sinus lift surgery",
+        "Implant-supported dentures",
+      ],
+      icon: Wrench,
     },
     {
       title: "Orthodontics",
@@ -44,32 +56,6 @@ export default function ServicesPage() {
         "Aesthetic facial enhancement",
       ],
       icon: Scissors,
-    },
-    {
-      title: "Implants & Oral Surgery",
-      description: "Dental implants, extractions, and bone grafting for comprehensive tooth replacement solutions.",
-      features: [
-        "Single and multiple implants",
-        "All-on-4 implant solutions",
-        "Wisdom tooth extraction",
-        "Bone grafting procedures",
-        "Sinus lift surgery",
-        "Implant-supported dentures",
-      ],
-      icon: Wrench,
-    },
-    {
-      title: "Cosmetic Dentistry",
-      description: "Teeth whitening, veneers, and complete smile makeovers to enhance your natural beauty.",
-      features: [
-        "Professional teeth whitening",
-        "Porcelain veneers",
-        "Complete smile design",
-        "Dental bonding",
-        "Gum contouring",
-        "Smile makeover consultations",
-      ],
-      icon: Sparkles,
     },
     {
       title: "Endodontics (Root Canal Treatment)",
@@ -123,6 +109,20 @@ export default function ServicesPage() {
       ],
       icon: Zap,
     },
+    {
+      title: "General & Preventive Dentistry",
+      description:
+        "Regular checkups, cleanings, and fillings to maintain optimal oral health and prevent future issues.",
+      features: [
+        "Comprehensive oral examinations",
+        "Professional dental cleanings",
+        "Cavity prevention and treatment",
+        "Fluoride treatments",
+        "Dental sealants",
+        "Oral cancer screenings",
+      ],
+      icon: Shield,
+    },
   ]
 
   return (
@@ -174,17 +174,23 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 py-20 bg-sage-green text-white">
-        <div className="max-w-7xl mx-auto text-center space-y-8">
-          <h2 className="font-serif text-4xl font-bold">Ready to Get Started?</h2>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+      <section className="px-6 py-20 bg-gradient-to-br from-sage-green/5 to-mint-green/10">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+            Ready to{" "}
+            <span className="italic text-sage-green/80">Get Started?</span>
+          </h2>
+          <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
             Schedule your consultation today and let us create a personalized treatment plan for you
           </p>
           <Link href="/contact">
-            <Button size="lg" variant="secondary" className="bg-white cursor-pointer  text-sage-green hover:bg-gray-100">
+            <Button
+              size="lg"
+              className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
+            >
               Book Appointment
             </Button>
-            </Link>
+          </Link>
         </div>
       </section>
     </div>

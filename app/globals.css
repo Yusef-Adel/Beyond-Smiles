@@ -6,17 +6,25 @@
 :root {
   /* Updated to Beyond Smiles brand colors */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground:   .font-neutral-bold {
+    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
+    font-weight: 700;
+  }
+  .font-neutral-black {
+    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
+    font-weight: 900;
+  }h(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
-  /* Brand Colors */
+  /* Brand Colors - Updated with refined palette */
   --mint-green: #d6ffd7;
   --sage-green: #72846f;
-  --dark-grey: #b1b1b5;
-  --light-grey: #fbfbff;
+  --dark-grey: #8f8f92; /* Updated from #b1b1b5 to match palette */
+  --light-grey: #f5f5f5; /* Updated from #fbfbff to match palette */
+  --neutral-grey: #b1b1b5; /* Added neutral grey as additional option */
 
   --primary: #72846f; /* sage green */
   --primary-foreground: oklch(0.985 0 0);
@@ -83,9 +91,14 @@
 }
 
 @theme inline {
-  /* Added brand font variables */
+  /* Updated brand font variables with Neutral Sans weights */
   --font-serif: var(--font-garamond);
   --font-sans: var(--font-inter);
+  --font-neutral-sans: var(--font-neutral-sans);
+  --font-neutral-regular: var(--font-neutral-regular);
+  --font-neutral-medium: var(--font-neutral-medium);
+  --font-neutral-bold: var(--font-neutral-bold);
+  --font-neutral-black: var(--font-neutral-black);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -129,6 +142,7 @@
   --color-sage-green: var(--sage-green);
   --color-dark-grey: var(--dark-grey);
   --color-light-grey: var(--light-grey);
+  --color-neutral-grey: var(--neutral-grey);
 }
 
 @layer base {
@@ -154,6 +168,9 @@
   .text-light-grey {
     color: var(--light-grey);
   }
+  .text-neutral-grey {
+    color: var(--neutral-grey);
+  }
   .bg-mint-green {
     background-color: var(--mint-green);
   }
@@ -165,5 +182,32 @@
   }
   .bg-light-grey {
     background-color: var(--light-grey);
+  }
+  .bg-neutral-grey {
+    background-color: var(--neutral-grey);
+  }
+  
+  /* Neutral Sans font utilities */
+  .font-neutral {
+    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
+  }
+  .font-secondary {
+    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
+  }
+  .font-neutral-regular {
+    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
+    font-weight: 400;
+  }
+  .font-neutral-medium {
+    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
+    font-weight: 500;
+  }
+  .font-neutral-bold {
+    font-family: var(--font-neutral-sans), var(--font-sans), sans-serif;
+    font-weight: 700;
+  }
+  .font-neutral-black {
+    font-family: var(--font-neutral-black), var(--font-sans), sans-serif;
+    font-weight: 900;
   }
 }

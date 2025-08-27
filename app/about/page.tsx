@@ -123,14 +123,20 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 py-20 bg-sage-green text-white">
-        <div className="max-w-7xl mx-auto text-center space-y-8">
-          <h2 className="font-serif text-4xl font-bold">Meet Our Expert Team</h2>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+      <section className="px-6 py-20 bg-gradient-to-br from-sage-green/5 to-mint-green/10">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+            Meet Our{" "}
+            <span className="italic text-sage-green/80">Expert Team</span>
+          </h2>
+          <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
             Get to know the specialists who make Beyond Smiles exceptional
           </p>
           <Link href="/team">
-            <Button size="lg" variant="secondary" className="bg-white cursor-pointer text-sage-green hover:bg-gray-100">
+            <Button
+              size="lg"
+              className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
+            >
               Meet Our Team
             </Button>
           </Link>
