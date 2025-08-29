@@ -70,9 +70,11 @@ export function Navigation() {
                 </Link>
               ))}
               <div className="px-4 pt-2">
+                <Link href="/contact">
                 <Button className="w-full bg-sage-green hover:bg-sage-green/90 text-white font-sans">
                   Book Appointment
                 </Button>
+                </Link>
               </div>
             </div>
           </div>
