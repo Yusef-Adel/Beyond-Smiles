@@ -38,9 +38,12 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <Link href="/contact">
+            
             <Button className="bg-sage-green cursor-pointer  hover:bg-sage-green/90 text-white text-sm xl:text-base px-4 xl:px-6 font-sans">
               Book Appointment
             </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
