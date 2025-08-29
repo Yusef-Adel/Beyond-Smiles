@@ -13,6 +13,7 @@ export function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Company Info */}
             <div className="flex flex-col justify-between space-y-6 sm:space-y-8 lg:col-span-1">
+              
               <div>
                 <FooterLogo size="sm" />
               </div>
