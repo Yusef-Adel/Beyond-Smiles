@@ -6,6 +6,7 @@ import localFont from "next/font/local"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { PageTransition } from "@/components/page-transition"
 
 const garamond = EB_Garamond({
   subsets: ["latin"],
@@ -19,13 +20,12 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-// Neutral Sans font
-const neutralSans = localFont({
-  src: "../public/fonts/NeutralSans-Regular.otf",
-  variable: "--font-neutral-sans",
-  weight: "400",
+// Neutral Sans font - using Inter as fallback until font files are added
+const neutralSans = Inter({
+  subsets: ["latin"],
   display: "swap",
-  fallback: ["Inter", "system-ui", "sans-serif"],
+  variable: "--font-neutral-sans",
+  weight: ["400", "500", "700", "900"],
 })
 
 export const metadata: Metadata = {
@@ -47,7 +47,9 @@ export default function RootLayout({
     >
       <body className="font-sans">
         <Navigation />
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
         <Footer />
       </body>
     </html>

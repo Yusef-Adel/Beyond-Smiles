@@ -1,6 +1,9 @@
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
+import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
+import Link from "next/link"
 
 export default function ContactPage() {
   return (
@@ -9,13 +12,17 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative px-6 py-24 md:py-32 bg-gradient-to-br from-light-grey via-white to-mint-green/20">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
-            Contact <span className="italic text-sage-green/80">Us</span>
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-            Have a question or want to book an appointment? Reach out to us! We're here to help you achieve your perfect
-            smile.
-          </p>
+          <FadeInWhenVisible direction="up">
+            <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
+              Contact <span className="italic text-sage-green/80">Us</span>
+            </h1>
+          </FadeInWhenVisible>
+          <FadeInWhenVisible direction="up" delay={0.2}>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+              Have a question or want to book an appointment? Reach out to us! We're here to help you achieve your perfect
+              smile.
+            </p>
+          </FadeInWhenVisible>
         </div>
       </section>
 
@@ -24,7 +31,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Details */}
-            <div>
+            <FadeInWhenVisible direction="left">
               <h2 className="font-serif text-4xl text-sage-green mb-8">
                 Get in <span className="italic text-sage-green/80">Touch</span>
               </h2>
@@ -80,10 +87,10 @@ export default function ContactPage() {
                   </div>
                 </Card>
               </div>
-            </div>
+            </FadeInWhenVisible>
 
             {/* Contact Form */}
-            <div>
+            <FadeInWhenVisible direction="right" delay={0.2}>
               <Card className="p-8 border-sage-green/20">
                 <h3 className="font-serif text-2xl text-sage-green mb-6">Send us a Message</h3>
                 <form className="space-y-6">
@@ -148,7 +155,7 @@ export default function ContactPage() {
                   <Button className="w-full font-neutral-medium cursor-pointer bg-sage-green hover:bg-sage-green/90 text-white py-3">Send Message</Button>
                 </form>
               </Card>
-            </div>
+            </FadeInWhenVisible>
           </div>
         </div>
       </section>
@@ -156,12 +163,37 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="px-6 py-20 bg-gradient-to-br from-mint-green/10 to-sage-green/5">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-serif text-4xl text-sage-green mb-6">
-            Find <span className="italic text-sage-green/80">Us</span>
-          </h2>
-          <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-            <p className="text-gray-500">Interactive Map Coming Soon</p>
-          </div>
+          <FadeInWhenVisible>
+            <h2 className="font-serif text-4xl text-sage-green mb-6">
+              Find <span className="italic text-sage-green/80">Us</span>
+            </h2>
+            <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
+              <p className="text-gray-500">Interactive Map Coming Soon</p>
+            </div>
+          </FadeInWhenVisible>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="px-6 py-20 bg-gradient-to-br from-sage-green/5 to-mint-green/10">
+        <div className="max-w-7xl mx-auto text-center">
+          <FadeInWhenVisible>
+            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+              Meet Our{" "}
+              <span className="italic text-sage-green/80">Expert Team</span>
+            </h2>
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
+              Get to know the specialists who will be taking care of your dental health and smile transformation.
+            </p>
+            <Link href="/team">
+              <Button
+                size="lg"
+                className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
+              >
+                Meet Our Team
+              </Button>
+            </Link>
+          </FadeInWhenVisible>
         </div>
       </section>
     </div>

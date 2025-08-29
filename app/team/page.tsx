@@ -2,6 +2,8 @@ import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
+import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
+import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
 
 export default function TeamPage() {
   return (
@@ -9,21 +11,25 @@ export default function TeamPage() {
       {/* Hero Section */}
       <section className="relative px-6 py-24 md:py-32 bg-gradient-to-br from-light-grey via-white to-mint-green/20">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
-            Meet Our <span className="italic text-sage-green/80">Expert Team</span>
-          </h1>
+          <FadeInWhenVisible direction="up">
+            <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
+              Meet Our <span className="italic text-sage-green/80">Expert Team</span>
+            </h1>
+          </FadeInWhenVisible>
           
-          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-            Our team is made up of experienced specialists in every field of dentistry. From general dentists to oral
-            surgeons, orthodontists, and periodontists, Beyond Smiles ensures that every patient receives top-tier care.
-          </p>
+          <FadeInWhenVisible direction="up" delay={0.2}>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+              Our team is made up of experienced specialists in every field of dentistry. From general dentists to oral
+              surgeons, orthodontists, and periodontists, Beyond Smiles ensures that every patient receives top-tier care.
+            </p>
+          </FadeInWhenVisible>
         </div>
       </section>
 
       {/* Team Members */}
       <section className="px-6 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 name: "Dr. Mohamed Abdalla",
@@ -61,46 +67,49 @@ export default function TeamPage() {
                 image: "/placeholder-zhymb.png",
               },
             ].map((doctor, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group"
-              >
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={doctor.image || "/placeholder.svg"}
-                    alt={doctor.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-xl text-sage-green mb-2">{doctor.name}</h3>
-                  <p className="text-sage-green/80 font-medium mb-3">{doctor.specialty}</p>
-                  <p className="text-gray-600 leading-relaxed text-sm">{doctor.description}</p>
-                </div>
-              </Card>
+              <StaggerItem key={index}>
+                <Card
+                  className="overflow-hidden border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group"
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={doctor.image || "/placeholder.svg"}
+                      alt={doctor.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl text-sage-green mb-2">{doctor.name}</h3>
+                    <p className="text-sage-green/80 font-medium mb-3">{doctor.specialty}</p>
+                    <p className="text-gray-600 leading-relaxed text-sm">{doctor.description}</p>
+                  </div>
+                </Card>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="px-6 py-20 bg-gradient-to-br from-sage-green/5 to-mint-green/10">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
-            Ready to{" "}
-            <span className="italic text-sage-green/80">Meet Our Team?</span>
-          </h2>
-          <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
-            Schedule your consultation and experience expert care from our specialists
-          </p>
-          <Link href="/contact">
-            <Button
-              size="lg"
-              className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
-            >
-              Book Appointment
-            </Button>
-          </Link>
+          <FadeInWhenVisible>
+            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+              Discover Our{" "}
+              <span className="italic text-sage-green/80">Services</span>
+            </h2>
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
+              Explore our comprehensive range of dental specialties designed to meet all your oral health needs.
+            </p>
+            <Link href="/services">
+              <Button
+                size="lg"
+                className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
+              >
+                View Our Services
+              </Button>
+            </Link>
+          </FadeInWhenVisible>
         </div>
       </section>
     </div>

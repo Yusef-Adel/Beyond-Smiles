@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Shield, Smile, Scissors, Wrench, Sparkles, Heart, Users, Baby, Zap } from "lucide-react"
 import Link from "next/link"
+import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
+import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
 
 export default function ServicesPage() {
   const services = [
@@ -133,64 +135,82 @@ export default function ServicesPage() {
         <div className="absolute bottom-20 left-10 w-48 h-24 bg-gradient-to-r from-sage-green/20 to-mint-green/20 rounded-full blur-2xl"></div>
 
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
-            Our <span className="italic text-sage-green/80">Services</span>
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-            Comprehensive dental care under one roof. Our expert specialists provide everything from routine checkups to
-            advanced treatments, ensuring the best possible care for every patient.
-          </p>
+          <FadeInWhenVisible direction="up">
+            <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
+              Our <span className="italic text-sage-green/80">Services</span>
+            </h1>
+          </FadeInWhenVisible>
+          <FadeInWhenVisible direction="up" delay={0.2}>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+              Comprehensive dental care under one roof. Our expert specialists provide everything from routine checkups to
+              advanced treatments, ensuring the best possible care for every patient.
+            </p>
+          </FadeInWhenVisible>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="px-6 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card
-                key={index}
-                className="border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group"
-              >
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-sage-green/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-sage-green/20 transition-colors">
-                    <service.icon className="w-8 h-8 text-sage-green" />
-                  </div>
-                  <h3 className="font-serif text-xl text-sage-green mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-sage-green mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <StaggerItem key={index}>
+                <Card
+                  className="border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group"
+                >
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-sage-green/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-sage-green/20 transition-colors">
+                      <service.icon className="w-8 h-8 text-sage-green" />
+                    </div>
+                    <h3 className="font-serif text-xl text-sage-green mb-4">{service.title}</h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-sage-green mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-gray-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="px-6 py-20 bg-gradient-to-br from-sage-green/5 to-mint-green/10">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
-            Ready to{" "}
-            <span className="italic text-sage-green/80">Get Started?</span>
-          </h2>
-          <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
-            Schedule your consultation today and let us create a personalized treatment plan for you
-          </p>
-          <Link href="/contact">
-            <Button
-              size="lg"
-              className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
-            >
-              Book Appointment
-            </Button>
-          </Link>
+          <FadeInWhenVisible>
+            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+              Ready to Get{" "}
+              <span className="italic text-sage-green/80">Started?</span>
+            </h2>
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
+              Schedule your consultation today and let us create a personalized treatment plan for you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
+                >
+                  Book Appointment
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-sage-green cursor-pointer font-neutral-medium text-sage-green hover:bg-sage-green hover:text-white px-8 bg-transparent"
+                >
+                  Contact Us
+                </Button>
+              </Link>
+            </div>
+          </FadeInWhenVisible>
         </div>
       </section>
     </div>

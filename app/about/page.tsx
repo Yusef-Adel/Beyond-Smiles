@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Users, Award, Heart, Lightbulb } from "lucide-react"
 import Link from "next/link"
+import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
+import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
 
 export default function AboutPage() {
   return (
@@ -12,14 +14,18 @@ export default function AboutPage() {
         <div className="absolute bottom-20 left-10 w-48 h-24 bg-gradient-to-r from-sage-green/20 to-mint-green/20 rounded-full blur-2xl"></div>
 
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
-            About <span className="italic text-sage-green/80">Beyond Smiles</span>
-          </h1>
+          <FadeInWhenVisible direction="up">
+            <h1 className="font-serif text-5xl md:text-6xl text-sage-green mb-6">
+              About <span className="italic text-sage-green/80">Beyond Smiles</span>
+            </h1>
+          </FadeInWhenVisible>
         
-          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-            More than just a dental clinic - we are a full-service dental center dedicated to providing advanced oral
-            care with specialists across all fields of dentistry.
-          </p>
+          <FadeInWhenVisible direction="up" delay={0.2}>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+              More than just a dental clinic - we are a full-service dental center dedicated to providing advanced oral
+              care with specialists across all fields of dentistry.
+            </p>
+          </FadeInWhenVisible>
         </div>
       </section>
 
@@ -27,14 +33,14 @@ export default function AboutPage() {
       <section className="px-6 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <FadeInWhenVisible direction="left">
               <img
                 src="/modern-dental-clinic.png"
                 alt="Modern dental clinic interior"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
-            </div>
-            <div className="space-y-6">
+            </FadeInWhenVisible>
+            <FadeInWhenVisible direction="right" delay={0.2} className="space-y-6">
               <h2 className="font-serif text-4xl text-sage-green mb-6">
                 Our <span className="italic text-sage-green/80">Mission</span>
               </h2>
@@ -55,34 +61,34 @@ export default function AboutPage() {
                   <CheckCircle className="w-6 h-6 text-sage-green mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Advanced Technology</h3>
-                    <p className="text-gray-600">For precise and comfortable care</p>
+                    <p className="text-gray-600">State-of-the-art equipment and techniques</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-sage-green mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Personalized Treatment</h3>
-                    <p className="text-gray-600">Tailored to your unique needs</p>
+                    <h3 className="font-semibold text-gray-900">Comprehensive Care</h3>
+                    <p className="text-gray-600">All treatments available under one roof</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </FadeInWhenVisible>
           </div>
         </div>
       </section>
 
       <section className="px-6 py-20 bg-gradient-to-br from-mint-green/10 to-sage-green/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <FadeInWhenVisible className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
               Our <span className="italic text-sage-green/80">Values</span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
               The principles that guide everything we do
             </p>
-          </div>
+          </FadeInWhenVisible>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: <Heart className="w-8 h-8 text-sage-green" />,
@@ -105,41 +111,55 @@ export default function AboutPage() {
                 description: "Advanced technology for precise and efficient care.",
               },
             ].map((value, index) => (
-              <Card
-                key={index}
-                className="text-center border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group"
-              >
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-sage-green/10 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-sage-green/20 transition-colors">
-                    {value.icon}
-                  </div>
-                  <h3 className="font-serif text-xl text-sage-green mb-3">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
+              <StaggerItem key={index}>
+                <Card
+                  className="text-center border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group"
+                >
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-sage-green/10 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-sage-green/20 transition-colors">
+                      {value.icon}
+                    </div>
+                    <h3 className="font-serif text-xl text-sage-green mb-3">{value.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="px-6 py-20 bg-gradient-to-br from-sage-green/5 to-mint-green/10">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
-            Meet Our{" "}
-            <span className="italic text-sage-green/80">Expert Team</span>
-          </h2>
-          <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
-            Get to know the specialists who make Beyond Smiles exceptional
-          </p>
-          <Link href="/team">
-            <Button
-              size="lg"
-              className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
-            >
-              Meet Our Team
-            </Button>
-          </Link>
+          <FadeInWhenVisible>
+            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+              Ready to Get{" "}
+              <span className="italic text-sage-green/80">Started?</span>
+            </h2>
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto mb-12 font-neutral-medium">
+              Schedule your consultation today and let us create a personalized treatment plan for you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
+                >
+                  Book Appointment
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-sage-green cursor-pointer font-neutral-medium text-sage-green hover:bg-sage-green hover:text-white px-8 bg-transparent"
+                >
+                  Contact Us
+                </Button>
+              </Link>
+            </div>
+          </FadeInWhenVisible>
         </div>
       </section>
     </div>
