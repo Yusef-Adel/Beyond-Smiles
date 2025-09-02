@@ -35,7 +35,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInWhenVisible direction="left">
               <img
-                src="/modern-dental-clinic.png"
+                src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6512.jpg"
                 alt="Modern dental clinic interior"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />

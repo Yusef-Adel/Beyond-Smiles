@@ -32,39 +32,35 @@ export default function TeamPage() {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Mohamed Abdalla",
-                specialty: "General Dentistry",
-                description:
-                  "Leading our general dentistry department with years of experience in comprehensive oral care.",
-                image: "/professional-dentist-portrait.png",
-              },
-              {
-                name: "Dr. Amr El Sebai",
-                specialty: "Restorative & Aesthetic Dentistry",
-                description:
-                  "Master's from Universitat Internacional de Catalunya in Spain. Certified digital dentistry user Exocad and Exoplan.",
-                image: "/professional-dentist-portrait.png",
-              },
-              {
-                name: "Dr. Aly Atteya",
+                name: "Dr. Aly Mohamed Atteya",
                 specialty: "Maxillofacial & Plastic Surgery",
                 description:
-                  "Double qualified maxillofacial surgeon. Fellowship Maxillofacial at Infant Cristina University in Spain. Doctorate of maxillofacial and plastic surgery.",
-                image: "/surgeon-portrait.png",
+                  "Dr Aly Mohamed Atteya — MBBCh, BDS, MS, PhD. Consultant and Lecturer of Maxillofacial and Plastic Surgery, Alexandria University. Clinical Fellow at Hospital Infanta Cristina, Spain.",
+                image:
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Aly%20Mohamed%20Atteya.jpg",
               },
               {
-                name: "Dr. Abbas Zaher",
+                name: "Prof. Abbas Zaher",
                 specialty: "Orthodontics",
                 description:
-                  "Professor and past chairman department of orthodontics at University of Alexandria. Honorary professor, University Del Valle, Colombia. President of the Egyptian orthodontic society. Past vice president of the world federation of orthodontics.",
-                image: "/orthodontist-portrait.png",
+                  "Professor and past-Chairman, Department of Orthodontics, Faculty of Dentistry, University of Alexandria. Honorary professor, University Del Valle, Cali, Colombia. President of the Egyptian Orthodontic Society. Past-Vice President of the World Federation of Orthodontists.",
+                image:
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/PHOTO-2025-08-17-16-47.jpg",
               },
               {
-                name: "Dr. Mohamed Abo el Hassan",
-                specialty: "Endodontics",
+                name: "Dr. Mohamed Abdallah",
+                specialty: "Cosmetic & Implant Dentistry",
+                description: "Dr Mohamed Abdallah — BDS, FICOI. Consultant cosmetic and implant dentistry.",
+                image:
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Mohamed%20Abdallah.jpg",
+              },
+              {
+                name: "Dr. Amr Elsebaey",
+                specialty: "Aesthetic Restorative Dentistry",
                 description:
-                  "Endodontic specialist and Lecturer of Endodontics at Cairo University, specializing in root canal treatments.",
-                image: "/placeholder-zhymb.png",
+                  "Specialist in Advanced Aesthetic Restorative Dentistry (UIC Barcelona). Certified in Exocad Digital Smile Design.",
+                image:
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Amr%20Elsebaey.jpg",
               },
             ].map((doctor, index) => (
               <StaggerItem key={index}>

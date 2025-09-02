@@ -387,7 +387,7 @@ export default function HomePage() {
             </FadeInWhenVisible>
             <FadeInWhenVisible direction="right" delay={0.2} className="relative">
               <img
-                src="/modern-dental-clinic.png"
+                src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6414.jpg"
                 alt="Modern dental clinic interior"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
