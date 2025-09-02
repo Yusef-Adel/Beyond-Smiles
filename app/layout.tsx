@@ -8,6 +8,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { PageTransition } from "@/components/page-transition"
 
+
 const garamond = EB_Garamond({
   subsets: ["latin"],
   display: "swap",
