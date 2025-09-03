@@ -29,9 +29,7 @@ export default function HomePage() {
             {/* Left content */}
             <FadeInWhenVisible direction="up" className="text-center lg:text-left">
               <div className="mb-6">
-                <p className="text-sage-green/80 font-medium mb-2 tracking-wide">
-                  WELCOME TO BEYOND SMILES
-                </p>
+                
                 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-sage-green mb-6 leading-tight">
                   Beyond Dentistry.{" "}
                   <span className="italic text-sage-green/90">
@@ -83,7 +81,7 @@ export default function HomePage() {
             <FadeInWhenVisible direction="right" delay={0.2} className="relative">
               <div className="relative z-10">
                 <img
-                  src="/luxury-dental-treatment.png"
+                  src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6439.jpg"
                   alt="Professional dental care at Beyond Smiles"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
@@ -258,48 +256,15 @@ export default function HomePage() {
 
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                name: "Sarah Johnson",
-                location: "Downtown",
-                rating: 5,
-                text: "The teeth whitening results exceeded my expectations! The staff was incredibly professional and made me feel comfortable throughout the entire process. I can't stop smiling!",
-                treatment: "Teeth Whitening",
-              },
-              {
-                name: "Michael Chen",
-                location: "Westside",
-                rating: 5,
-                text: "After years of avoiding smiles, Beyond Smiles transformed my confidence with their cosmetic dentistry. The attention to detail and care was exceptional.",
-                treatment: "Cosmetic Dentistry",
-              },
-              {
-                name: "Emily Rodriguez",
-                location: "East End",
-                rating: 5,
-                text: "The orthodontic treatment here was seamless. Dr. Smith and the team made sure I was informed every step of the way. My smile has never looked better!",
-                treatment: "Orthodontics",
-              },
-              {
-                name: "David Thompson",
-                location: "Uptown",
-                rating: 5,
-                text: "I was nervous about getting dental implants, but the team at Beyond Smiles made the process smooth and comfortable. The results are incredible!",
-                treatment: "Dental Implants",
-              },
-              {
-                name: "Lisa Park",
-                location: "Southside",
-                rating: 5,
-                text: "The preventive care program here is outstanding. They caught issues early and prevented major problems. Truly beyond expectations!",
-                treatment: "Preventive Care",
-              },
-              {
-                name: "James Wilson",
-                location: "North Hills",
-                rating: 5,
-                text: "The root canal treatment was painless and efficient. The technology and expertise at Beyond Smiles is truly world-class.",
-                treatment: "Endodontics",
-              },
+              { name: "shereef fahmy", location: "", rating: 5, text: "The teeth whitening results exceeded my expectations! The staff was incredibly professional and made me feel comfortable throughout the entire process. I can't stop smiling!", treatment: "Teeth Whitening" },
+              { name: "Karim Salama", location: "", rating: 5, text: "After years of avoiding smiles, Beyond Smiles transformed my confidence with their cosmetic dentistry. The attention to detail and care was exceptional.", treatment: "Cosmetic Dentistry" },
+              { name: "Maram Ghaly", location: "", rating: 5, text: "The orthodontic treatment here was seamless. Dr. Smith and the team made sure I was informed every step of the way. My smile has never looked better!", treatment: "Orthodontics" },
+              { name: "Essam Mohamed", location: "", rating: 5, text: "I was nervous about getting dental implants, but the team at Beyond Smiles made the process smooth and comfortable. The results are incredible!", treatment: "Dental Implants" },
+              { name: "Mostafa Mounir", location: "", rating: 5, text: "The preventive care program here is outstanding. They caught issues early and prevented major problems. Truly beyond expectations!", treatment: "Preventive Care" },
+              { name: "Maha Blakeway", location: "", rating: 5, text: "The root canal treatment was painless and efficient. The technology and expertise at Beyond Smiles is truly world-class.", treatment: "Endodontics" },
+              { name: "Eman Gamal", location: "", rating: 5, text: "The preventive care program here is outstanding. They caught issues early and prevented major problems. Truly beyond expectations!", treatment: "Preventive Care" },
+              { name: "Khaled Aly", location: "", rating: 5, text: "After years of avoiding smiles, Beyond Smiles transformed my confidence with their cosmetic dentistry. The attention to detail and care was exceptional.", treatment: "Cosmetic Dentistry" },
+              { name: "Lina Amr", location: "", rating: 5, text: "Words wont do him justice, 1000% recommended, ur in safe hands. He gave me my dream smile in a matter of weeks and fixed what I thought cannot be fixed. He is very patient and listens to his patients. Very understandable and professional, one of a kind dentist.", treatment: "Cosmetic Dentistry" },
             ].map((testimonial, index) => (
               <StaggerItem key={index}>
                 <Card

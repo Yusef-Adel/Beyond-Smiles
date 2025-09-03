@@ -32,12 +32,11 @@ export default function TeamPage() {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Aly Mohamed Atteya",
-                specialty: "Maxillofacial & Plastic Surgery",
-                description:
-                  "Dr Aly Mohamed Atteya — MBBCh, BDS, MS, PhD. Consultant and Lecturer of Maxillofacial and Plastic Surgery, Alexandria University. Clinical Fellow at Hospital Infanta Cristina, Spain.",
+                name: "Dr. Mohamed Abdallah",
+                specialty: "Cosmetic & Implant Dentistry",
+                description: "Dr Mohamed Abdallah — BDS, FICOI. Consultant cosmetic and implant dentistry.",
                 image:
-                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Aly%20Mohamed%20Atteya.jpg",
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Mohamed%20Abdallah.jpg",
               },
               {
                 name: "Prof. Abbas Zaher",
@@ -48,11 +47,12 @@ export default function TeamPage() {
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/PHOTO-2025-08-17-16-47.jpg",
               },
               {
-                name: "Dr. Mohamed Abdallah",
-                specialty: "Cosmetic & Implant Dentistry",
-                description: "Dr Mohamed Abdallah — BDS, FICOI. Consultant cosmetic and implant dentistry.",
+                name: "Dr. Aly Mohamed Atteya",
+                specialty: "Maxillofacial & Plastic Surgery",
+                description:
+                  "Dr Aly Mohamed Atteya — MBBCh, BDS, MS, PhD. Consultant and Lecturer of Maxillofacial and Plastic Surgery, Alexandria University. Clinical Fellow at Hospital Infanta Cristina, Spain.",
                 image:
-                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Mohamed%20Abdallah.jpg",
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Aly%20Mohamed%20Atteya.jpg",
               },
               {
                 name: "Dr. Amr Elsebaey",
@@ -61,6 +61,12 @@ export default function TeamPage() {
                   "Specialist in Advanced Aesthetic Restorative Dentistry (UIC Barcelona). Certified in Exocad Digital Smile Design.",
                 image:
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Amr%20Elsebaey.jpg",
+              },
+              {
+                name: "Dr. Ahmed Ahmed",
+                specialty: "Endodontics",
+                description: "Endodontic consultant",
+                image: "/placeholder-zhymb.png",
               },
             ].map((doctor, index) => (
               <StaggerItem key={index}>
