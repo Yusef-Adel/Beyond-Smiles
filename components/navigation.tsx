@@ -13,6 +13,7 @@ export function Navigation() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
+    { href: "/cases", label: "Cases" },
     { href: "/team", label: "Our Team" },
     { href: "/contact", label: "Contact" },
   ];
