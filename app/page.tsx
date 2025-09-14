@@ -254,6 +254,36 @@ export default function HomePage() {
             </p>
           </FadeInWhenVisible>
 
+          {/* Featured Video Testimonial */}
+          <FadeInWhenVisible className="mb-12">
+            <div className="max-w-2xl mx-auto">
+              <Card className="border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group relative overflow-hidden">
+                <div className="p-6 text-center">
+                  <h3 className="font-serif text-xl text-sage-green mb-4">Patient Review</h3>
+                  <div className="relative rounded-lg overflow-hidden shadow-lg mb-4">
+                    <video 
+                      controls 
+                      className="w-full h-auto"
+                      poster="/placeholder.jpg"
+                    >
+                      <source 
+                        src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/VIDEO-2025-09-02-18-58-35.mp4" 
+                        type="video/mp4" 
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="flex gap-1 justify-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-dark-grey italic">"Hear from our satisfied patients"</p>
+                </div>
+              </Card>
+            </div>
+          </FadeInWhenVisible>
+
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { name: "shereef fahmy", location: "", rating: 5, text: "The teeth whitening results exceeded my expectations! The staff was incredibly professional and made me feel comfortable throughout the entire process. I can't stop smiling!", treatment: "Teeth Whitening" },

@@ -7,18 +7,18 @@ export default function CasesPage() {
   const cases = [
     {
       title: "Whitening Case",
-      before: "/image.png",
-      after: "/Screenshot_1.jpg",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/before%20(1).JPG",
+      after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/IMG_0073%20(1).jpg",
     },
     {
-      title: "Veneers Case",
-      before: "/image.png",
-      after: "/Screenshot_1.jpg",
+      title: "Cosmetic Veneers Case",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/before.JPG",
+      after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/111_9466.jpg",
     },
     {
       title: "Alignment Case",
-      before: "/image.png",
-      after: "/Screenshot_1.jpg",
+      before: "/placeholder.jpg",
+      after: "/placeholder.jpg",
     },
   ]
 
@@ -81,10 +81,10 @@ export default function CasesPage() {
 
           <FadeInWhenVisible direction="up" className="flex justify-center">
             <BeforeAfterSlider
-              beforeImage="/image.png"
-              afterImage="/Screenshot_1.jpg"
-              beforeAlt="Before"
-              afterAlt="After"
+              beforeImage="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/before.JPG"
+              afterImage="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/111_9466.jpg"
+              beforeAlt="Before treatment"
+              afterAlt="After treatment"
               className="shadow-2xl max-w-4xl"
             />
           </FadeInWhenVisible>

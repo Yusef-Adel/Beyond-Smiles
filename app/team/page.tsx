@@ -55,6 +55,14 @@ export default function TeamPage() {
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Aly%20Mohamed%20Atteya.jpg",
               },
               {
+                name: "Dr. Mohamed Mohsen",
+                specialty: "Endodontic Consultant",
+                description:
+                  "Experienced endodontic consultant providing comprehensive root canal treatment and endodontic care with a focus on patient comfort and excellent outcomes.",
+                image:
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr.%20Mohamed%20Mohsen.jpg",
+              },
+              {
                 name: "Dr. Amr Elsebaey",
                 specialty: "Aesthetic Restorative Dentistry",
                 description:
